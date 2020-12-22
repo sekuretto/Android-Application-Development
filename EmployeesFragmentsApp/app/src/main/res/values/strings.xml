@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Employees Fragments App</string>
+    <string name="image">image</string>
+    <string name="descript">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a sapien ante. Proin vel interdum leo, elementum congue sem. Sed nec ante ac lacus lobortis mattis eget in arcu. Vestibulum sit amet lacus vel justo lobortis pulvinar in eget mauris. Proin semper volutpat ante, eget hendrerit turpis pretium vitae. Vestibulum orci libero, pretium in congue ut, condimentum sed mi. Nulla porta sapien id cursus malesuada. Cras sed felis eget felis interdum bibendum. Morbi eget arcu commodo, gravida metus a, feugiat nulla.</string>
+</resources>
