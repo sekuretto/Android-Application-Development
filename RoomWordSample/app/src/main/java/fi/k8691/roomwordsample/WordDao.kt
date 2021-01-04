@@ -1,13 +1,12 @@
 package fi.k8691.roomwordsample
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao {
+    @Entity(tableName = "word_table")
+    class Word(@PrimaryKey @ColumnInfo(name="word") val word: String)
 
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     fun getAlphabetizedWords(): Flow<List<Word>>

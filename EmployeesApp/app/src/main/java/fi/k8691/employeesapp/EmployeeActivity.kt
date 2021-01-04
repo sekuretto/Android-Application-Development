@@ -19,13 +19,13 @@ class EmployeeActivity : AppCompatActivity() {
         if (bundle != null) {
             val employeeString = bundle.getString("employee")
             val employee = JSONObject(employeeString)
-            val fullName = employee["firstName"].toString() + " " + employee["lastName"].toString()
-            //val title = employee["title"].toString()
-            //val email = employee["email"].toString()
-            //val phone = employee["phone"].toString()
-            //val department = employee["department"].toString()
+            empName.text = employee["firstName"].toString() + " " + employee["lastName"].toString()
+            empTitle.text = employee["title"].toString()
+            empEmail.text = employee["email"].toString()
+            empPhone.text = employee["phone"].toString()
+            empDep.text = employee["department"].toString()
             val image = employee["image"]
-            val nameView = (TextView) findViewById(R.id.empName)
+            //val nameView = (TextView) findViewById(R.id.empName)
             //val titleView = (TextView(findViewById(R.id.empTitle)))
             //val emailView = (TextView(findViewById(R.id.empEmail)))
             //val phoneView = (TextView(findViewById(R.id.empPhone)))
@@ -34,14 +34,9 @@ class EmployeeActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(image)
                 .into(employeeImageView)
-            nameView.text = fullName
-            //titleView.text = title
-            //emailView.text = email
-            //phoneView.text = phone
-            //depView.text = department
 
             // modify here to display other employee's data too!
-            Toast.makeText(this, "Name is $fullName", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Name is $empName", Toast.LENGTH_LONG).show()
         }
     }
 }
