@@ -5,15 +5,17 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import fi.k8691.weatherapp.MainActivity
 
 class PageViewModel : ViewModel() {
 
-    private val _index = MutableLiveData<Int>()
-    val text: LiveData<String> = Transformations.map(_index) {
-        "Hello world from section: $it"
+    private val _forecast = MutableLiveData<MainActivity.Forecast>()
+
+    val forecast: LiveData<MainActivity.Forecast> = Transformations.map(_forecast) {
+        it
     }
 
-    fun setIndex(index: Int) {
-        _index.value = index
+    fun setForecast(forecast: MainActivity.Forecast) {
+        _forecast.value = forecast
     }
 }
